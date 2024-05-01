@@ -1,0 +1,30 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #e6f6f7;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #7a10eb;
+    font-family: oswald;
+}
+
+.result {
+    color: purple;
+    border: 30px;
+}
+
+.howmanytimes {
+    color: #33332f;
+    border:20px;
+    display: flex;
+    justify-content: center;
+}
+
+
