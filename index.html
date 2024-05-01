@@ -1,0 +1,103 @@
+<!DOCTYPE html> <html><head>
+        <title>5p What kind of fruit are you</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+        <link href="https://sicarfarms.com/wp-content/uploads/2021/01/Mango.png" rel="script">
+
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #e6f6f7;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #7a10eb;
+    font-family: oswald;
+}
+
+.result {
+    color: purple;
+    border: 30px;
+}
+
+.howmanytimes {
+    color: #33332f;
+    border:20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+</style></head>
+    <body>
+        <div class="title">
+            <h1>What Kind of Fruit Are You?</h1>
+        </div>
+        <div class="questions">
+            <h4>How many times did you have performance before?</h4>
+
+            <img alt="Gif of student profrmance" src="https://www.icegif.com/wp-content/uploads/2023/09/icegif-260.gif">
+            <br>
+            <input class="q1" placeholder="your answer">
+
+            <h4>How do you feel during the performance? If you haven't, what do you think you will feel : scared or confident or don't care</h4>
+           
+            <img alt="breath" src="https://www.44school.com/blog/wp-content/uploads/2021/02/vidar-nordli-mathisen-iTOq8vZkVEY-unsplash-scaled.jpg">
+        </div>
+        
+        <input class="q2" placeholder="your answer">
+                  <br>  
+        <div class="answer-button">
+            <button class="Seeresults">See the result</button>
+        </div>
+        <button>
+            <div class="result">
+                This will be your answer key
+            </div>
+        </button>
+        <br>
+        <button>
+            <div class="howmanytimes">
+                how many times did you play
+            </div>
+        </button>
+    
+<script>
+/*__POPCODESTART__*/
+var answerButton = document.querySelector(".answer-button");
+var resultShow = document.querySelector(".result");
+var img1 = "https://sicarfarms.com/wp-content/uploads/2021/01/Mango.png";
+var counter = 0;
+var howManyTimes = document.querySelector(".howmanytimes");
+
+answerButton.onclick = function () {
+  counter = counter + 1;
+  var q1Input = document.querySelector(".q1").value;
+  var q2Input = document.querySelector(".q2").value;
+
+  if (q1Input <= 3 && q2Input === "confident") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were confident during the profarmence, you should be Mango";
+  } else if (q1Input <= 3 && q2Input === "scared") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were scared during the profarmence, you should be banana";
+  } else if (q1Input <= 3 && q2Input === "don't care") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were scared during the profarmence, you should be kiwi ";
+  } else if (q1Input >= 3 && q2Input === "confident") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were confident during the profarmence, you should be coconut ";
+  } else if (q1Input >= 3 && q2Input === "don't care") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were scared during the profarmence, you should be kiwi ";
+  } else if (q1Input >= 3 && q2Input === "confident") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were scared during the profarmence, you should be cherries ";
+  } else if (q1Input >= 3 && q2Input === "scared") {
+    resultShow.innerHTML = "Since you proform " + q1Input + " times and you were scared during the profarmence, you should be cherries ";
+  } else {
+    resultShow.innerHTML = "I think you did something wrong";
+  }
+
+  howManyTimes.innerHTML = "You took the game " + counter + " times.";
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImFuc3dlckJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInJlc3VsdFNob3ciLCJpbWcxIiwiY291bnRlciIsImhvd01hbnlUaW1lcyIsIm9uY2xpY2siLCJxMUlucHV0IiwidmFsdWUiLCJxMklucHV0IiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxZQUFZLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixnQkFBdkIsQ0FBbkI7QUFDQSxJQUFJQyxVQUFVLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFqQjtBQUNBLElBQUlFLElBQUksR0FBRyw2REFBWDtBQUNBLElBQUlDLE9BQU8sR0FBRyxDQUFkO0FBQ0EsSUFBSUMsWUFBWSxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsZUFBdkIsQ0FBbkI7O0FBQ0FGLFlBQVksQ0FBQ08sT0FBYixHQUF3QixZQUFXO0FBQy9CRixFQUFBQSxPQUFPLEdBQUdBLE9BQU8sR0FBRyxDQUFwQjtBQUNBLE1BQUlHLE9BQU8sR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLEVBQThCTyxLQUE1QztBQUNBLE1BQUlDLE9BQU8sR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLEVBQThCTyxLQUE1Qzs7QUFDQSxNQUFJRCxPQUFPLElBQUksQ0FBWCxJQUFnQkUsT0FBTyxLQUFLLFdBQWhDLEVBQTZDO0FBQ3pDUCxJQUFBQSxVQUFVLENBQUNRLFNBQVgsR0FBdUIsdUJBQXVCSCxPQUF2QixHQUFpQywyRUFBeEQ7QUFFSCxHQUhELE1BR08sSUFBSUEsT0FBTyxJQUFJLENBQVgsSUFBZ0JFLE9BQU8sS0FBSyxRQUFoQyxFQUEwQztBQUM3Q1AsSUFBQUEsVUFBVSxDQUFDUSxTQUFYLEdBQXVCLHVCQUF1QkgsT0FBdkIsR0FBaUMseUVBQXhEO0FBRUgsR0FITSxNQUdBLElBQUlBLE9BQU8sSUFBSSxDQUFYLElBQWdCRSxPQUFPLEtBQUssWUFBaEMsRUFBOEM7QUFDakRQLElBQUFBLFVBQVUsQ0FBQ1EsU0FBWCxHQUF1Qix1QkFBdUJILE9BQXZCLEdBQWlDLHdFQUF4RDtBQUVILEdBSE0sTUFHQSxJQUFJQSxPQUFPLElBQUksQ0FBWCxJQUFnQkUsT0FBTyxLQUFLLFdBQWhDLEVBQTZDO0FBQ2hEUCxJQUFBQSxVQUFVLENBQUNRLFNBQVgsR0FBdUIsdUJBQXVCSCxPQUF2QixHQUFpQyw4RUFBeEQ7QUFFSCxHQUhNLE1BR0EsSUFBSUEsT0FBTyxJQUFJLENBQVgsSUFBZ0JFLE9BQU8sS0FBSyxZQUFoQyxFQUE4QztBQUNqRFAsSUFBQUEsVUFBVSxDQUFDUSxTQUFYLEdBQXVCLHVCQUF1QkgsT0FBdkIsR0FBaUMsd0VBQXhEO0FBRUgsR0FITSxNQUdBLElBQUlBLE9BQU8sSUFBSSxDQUFYLElBQWdCRSxPQUFPLEtBQUssV0FBaEMsRUFBNkM7QUFDaERQLElBQUFBLFVBQVUsQ0FBQ1EsU0FBWCxHQUF1Qix1QkFBdUJILE9BQXZCLEdBQWlDLDRFQUF4RDtBQUVILEdBSE0sTUFHQSxJQUFJQSxPQUFPLElBQUksQ0FBWCxJQUFnQkUsT0FBTyxLQUFLLFFBQWhDLEVBQTBDO0FBQzdDUCxJQUFBQSxVQUFVLENBQUNRLFNBQVgsR0FBdUIsdUJBQXVCSCxPQUF2QixHQUFpQyw0RUFBeEQ7QUFFSCxHQUhNLE1BR0E7QUFDSEwsSUFBQUEsVUFBVSxDQUFDUSxTQUFYLEdBQXVCLGlDQUF2QjtBQUNIOztBQUNETCxFQUFBQSxZQUFZLENBQUNLLFNBQWIsR0FBeUIsdUJBQXVCTixPQUF2QixHQUFpQyxTQUExRDtBQUVILENBOUJEIiwic291cmNlc0NvbnRlbnQiOlsibGV0IGFuc3dlckJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYW5zd2VyLWJ1dHRvblwiKTtcbmxldCByZXN1bHRTaG93ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIik7XG5sZXQgaW1nMSA9IFwiaHR0cHM6Ly9zaWNhcmZhcm1zLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAyMS8wMS9NYW5nby5wbmdcIjtcbmxldCBjb3VudGVyID0gMDtcbmxldCBob3dNYW55VGltZXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmhvd21hbnl0aW1lc1wiKTtcbmFuc3dlckJ1dHRvbi5vbmNsaWNrID0gKGZ1bmN0aW9uKCkge1xuICAgIGNvdW50ZXIgPSBjb3VudGVyICsgMTtcbiAgICBsZXQgcTFJbnB1dCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucTFcIikudmFsdWU7XG4gICAgbGV0IHEySW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnEyXCIpLnZhbHVlO1xuICAgIGlmIChxMUlucHV0IDw9IDMgJiYgcTJJbnB1dCA9PT0gXCJjb25maWRlbnRcIikge1xuICAgICAgICByZXN1bHRTaG93LmlubmVySFRNTCA9IFwiU2luY2UgeW91IHByb2Zvcm0gXCIgKyBxMUlucHV0ICsgXCIgdGltZXMgYW5kIHlvdSB3ZXJlIGNvbmZpZGVudCBkdXJpbmcgdGhlIHByb2Zhcm1lbmNlLCB5b3Ugc2hvdWxkIGJlIE1hbmdvXCI7XG5cbiAgICB9IGVsc2UgaWYgKHExSW5wdXQgPD0gMyAmJiBxMklucHV0ID09PSBcInNjYXJlZFwiKSB7XG4gICAgICAgIHJlc3VsdFNob3cuaW5uZXJIVE1MID0gXCJTaW5jZSB5b3UgcHJvZm9ybSBcIiArIHExSW5wdXQgKyBcIiB0aW1lcyBhbmQgeW91IHdlcmUgc2NhcmVkIGR1cmluZyB0aGUgcHJvZmFybWVuY2UsIHlvdSBzaG91bGQgYmUgYmFuYW5hXCI7XG5cbiAgICB9IGVsc2UgaWYgKHExSW5wdXQgPD0gMyAmJiBxMklucHV0ID09PSBcImRvbid0IGNhcmVcIikge1xuICAgICAgICByZXN1bHRTaG93LmlubmVySFRNTCA9IFwiU2luY2UgeW91IHByb2Zvcm0gXCIgKyBxMUlucHV0ICsgXCIgdGltZXMgYW5kIHlvdSB3ZXJlIHNjYXJlZCBkdXJpbmcgdGhlIHByb2Zhcm1lbmNlLCB5b3Ugc2hvdWxkIGJlIGtpd2kgXCI7XG5cbiAgICB9IGVsc2UgaWYgKHExSW5wdXQgPj0gMyAmJiBxMklucHV0ID09PSBcImNvbmZpZGVudFwiKSB7XG4gICAgICAgIHJlc3VsdFNob3cuaW5uZXJIVE1MID0gXCJTaW5jZSB5b3UgcHJvZm9ybSBcIiArIHExSW5wdXQgKyBcIiB0aW1lcyBhbmQgeW91IHdlcmUgY29uZmlkZW50IGR1cmluZyB0aGUgcHJvZmFybWVuY2UsIHlvdSBzaG91bGQgYmUgY29jb251dCBcIjtcblxuICAgIH0gZWxzZSBpZiAocTFJbnB1dCA+PSAzICYmIHEySW5wdXQgPT09IFwiZG9uJ3QgY2FyZVwiKSB7XG4gICAgICAgIHJlc3VsdFNob3cuaW5uZXJIVE1MID0gXCJTaW5jZSB5b3UgcHJvZm9ybSBcIiArIHExSW5wdXQgKyBcIiB0aW1lcyBhbmQgeW91IHdlcmUgc2NhcmVkIGR1cmluZyB0aGUgcHJvZmFybWVuY2UsIHlvdSBzaG91bGQgYmUga2l3aSBcIjtcblxuICAgIH0gZWxzZSBpZiAocTFJbnB1dCA+PSAzICYmIHEySW5wdXQgPT09IFwiY29uZmlkZW50XCIpIHtcbiAgICAgICAgcmVzdWx0U2hvdy5pbm5lckhUTUwgPSBcIlNpbmNlIHlvdSBwcm9mb3JtIFwiICsgcTFJbnB1dCArIFwiIHRpbWVzIGFuZCB5b3Ugd2VyZSBzY2FyZWQgZHVyaW5nIHRoZSBwcm9mYXJtZW5jZSwgeW91IHNob3VsZCBiZSBjaGVycmllcyBcIjtcblxuICAgIH0gZWxzZSBpZiAocTFJbnB1dCA+PSAzICYmIHEySW5wdXQgPT09IFwic2NhcmVkXCIpIHtcbiAgICAgICAgcmVzdWx0U2hvdy5pbm5lckhUTUwgPSBcIlNpbmNlIHlvdSBwcm9mb3JtIFwiICsgcTFJbnB1dCArIFwiIHRpbWVzIGFuZCB5b3Ugd2VyZSBzY2FyZWQgZHVyaW5nIHRoZSBwcm9mYXJtZW5jZSwgeW91IHNob3VsZCBiZSBjaGVycmllcyBcIjtcblxuICAgIH0gZWxzZSB7XG4gICAgICAgIHJlc3VsdFNob3cuaW5uZXJIVE1MID0gXCJJIHRoaW5rIHlvdSBkaWQgc29tZXRoaW5nIHdyb25nXCI7XG4gICAgfVxuICAgIGhvd01hbnlUaW1lcy5pbm5lckhUTUwgPSBcIllvdSB0b29rIHRoZSBnYW1lIFwiICsgY291bnRlciArIFwiIHRpbWVzLlwiO1xuXG59KTsiXX0=</script></body></html>
